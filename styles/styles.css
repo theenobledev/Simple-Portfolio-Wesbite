@@ -5,9 +5,18 @@
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #f9f7f7 0%, #dbe2ef 100%);
+}
+
 header {
     background-color: #333;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .container {
@@ -35,15 +44,20 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #f1c40f;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 main {
     background-color: #f1c40f;
-    padding: 2rem 0;
+    padding: 3rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+   text-align: center;
 }
 
 main h1 {
@@ -79,9 +93,10 @@ section h2 {
 }
 
 section img {
-    max-width: 150px;
+    max-width: 350px;
     height: auto;
     margin-bottom: 1rem;
+    border-radius: 50%;
 }
 
 section p {
@@ -100,6 +115,8 @@ section#contact textarea {
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 section#contact button {
@@ -113,6 +130,11 @@ section#contact button {
 
 section#contact button:hover {
     background-color: #555;
+}
+
+main button,
+section#contact button {
+    border-radius: 5px;
 }
 
 /* Portfolio Section */
@@ -145,6 +167,9 @@ section#contact button:hover {
 
 .portfolio-item:hover img {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
 }
 
 .portfolio-item h3 {
@@ -172,7 +197,20 @@ section#contact button:hover {
 }
 
 .social-media a:hover {
-    color: #6c757d;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+footer {
+   background-color: #333;
+    padding: 1rem 0;
+}
+
+footer p {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
